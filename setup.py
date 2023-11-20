@@ -9,8 +9,8 @@ setup(
     name='cron_py',
     version=__version__,
     description='cron tab handler',
-    author='Servihabitat',
-    author_email='Your email',
+    author='Marc anglisano',
+    author_email='marcanglisano@gmail.com',
     classifiers=[
         "Programming Language :: Python :: 3",
         "Operating System :: OS Independent",
