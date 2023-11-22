@@ -7,7 +7,7 @@ from setuptools import (
     setup
 )
 
-from cron_py._version import __version__
+from crontab_py._version import __version__
 
 PKG_ROOT = os.path.dirname((os.path.abspath(__file__)))
 
@@ -21,7 +21,7 @@ def get_requirements() -> List[str]:
 
 def get_package_data_files(pattern: str) -> List[str]:
 
-    path = os.path.join(PKG_ROOT, 'cron_py')
+    path = os.path.join(PKG_ROOT, 'crontab_py')
 
     if isinstance(pattern, str):
         pattern = [pattern]
@@ -36,7 +36,7 @@ def get_package_data_files(pattern: str) -> List[str]:
     return result
 
 setup(
-    name='cron_py',
+    name='crontab_py',
     version=__version__,
     description='cron tab handler',
     author='Marc anglisano',
@@ -46,10 +46,10 @@ setup(
         "Operating System :: OS Independent",
     ],
     packages=find_packages(
-        include=["cron_py.*", "cron_py"]
+        include=["crontab_py.*", "crontab_py"]
     ),
     package_data={
-        'cron_py': [
+        'crontab_py': [
             *get_package_data_files(pattern='*.yml'),
             *get_package_data_files(pattern='*.html'),
             *get_package_data_files(pattern='*.txt'),
