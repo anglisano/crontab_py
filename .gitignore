@@ -71,3 +71,4 @@ target/
 
 # Exclude ssh keys
 .ssh
+tempfile
