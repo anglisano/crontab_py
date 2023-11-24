@@ -1,8 +1,8 @@
 from typing import List
 import subprocess
 import re
-import _routing as r
-from utils.errors import (
+import crontab_py._routing as r
+from crontab_py.utils.errors import (
     InvalidCrontabError, 
     InvalidCronJobError, 
     InvalidCronJobIdError,
@@ -130,20 +130,3 @@ class Crontab():
         self._write_crontab()
         return None    
         
-# if __name__ == "__main__":
-#     ct=Crontab()
-#     ct.crontab
-#     ct.add_pyjob(path="/app/tests/resources/pr.py",frequency="* * * * *",path_to_log="/app/a.txt",id="testpy",path_requirements="/app/requirements-dev.txt")
-#     # ct.add_pyjob(path="/app/tests/resources/pr.py",frequency="* * * * *",1,2)
-
-#     ct.add_job(cmd="cd /app && ls",frequency="* * * * *",path_to_log="/app/a.txt",id="testid1",description="test")
-    
-#     ct.remove_job(id="testid1")
-    
-#     ct.remove_all()
-    
-## cronR job
-## id:   COMPASS_PUBLI
-## tags: 
-## desc: genera tabla COMPASS_PUBLI
-## 1 9,16 * * 1-5 /opt/R/3.5.0/lib/R/bin/Rscript '/home/Operaciones_cron_R/cron_r/executable/COMPASS_PUBLI.R'  >> '/Analitycs/OPERACIONES/LOG_CRON_R/COMPASS_PUBLI.log' 2>&1
