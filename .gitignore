@@ -72,3 +72,4 @@ target/
 # Exclude ssh keys
 .ssh
 tempfile
+main.py
