@@ -8,13 +8,14 @@
 
 name: Upload Python Package
 
-on: workflow_dispatch
+on: 
+  workflow_dispatch:
   # release:
   #   types: [published]
-  # push:
-  #   branches: [ "main" ]
-  # pull_request:
-  #   branches: [ "main" ]
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
   
     
 
