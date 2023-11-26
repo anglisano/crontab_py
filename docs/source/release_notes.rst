@@ -9,8 +9,8 @@ Relase Notes
    * - Version
      - Authors
      - Release Notes
-   * - <version>
-     - Servihabitat AI team
-     - Here the comments of the release.
+   * - 0.0.2
+     - Marc Anglisano Roca
+     - first version funtional.
    
 
