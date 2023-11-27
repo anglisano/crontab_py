@@ -41,6 +41,8 @@ setup(
     description='cron tab handler',
     author='Marc anglisano',
     author_email='marcanglisano@gmail.com',
+    url='https://github.com/anglisano/crontab_py.git',
+    upload_sphinx='docs/build/html',
     classifiers=[
         "Programming Language :: Python :: 3",
         "Operating System :: OS Independent",

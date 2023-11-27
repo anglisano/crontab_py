@@ -12,7 +12,19 @@ from uuid import uuid4
 
 class Crontab():
     """
-    Crontab class to manage crontab jobs
+    Crontab class to manage crontab jobs.
+    
+    example:\n
+    from crontab_py import Crontab \n
+    ct = Crontab()\n
+    ct.add_job(
+        cmd="echo 'hello world'",
+        frequency="* * * * *",
+        path_to_log="/tmp/crontab.log",
+        id="my_job",
+        description="my job"
+    )
+
     """    
     def __init__(self) -> None:
         self._read_crontab()
