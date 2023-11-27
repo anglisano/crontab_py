@@ -12,5 +12,8 @@ Relase Notes
    * - 0.0.2
      - Marc Anglisano Roca
      - first version funtional.
+   * - 0.0.3
+     - Marc Anglisano Roca
+     - add sphinx documentation to the project.
    
 
