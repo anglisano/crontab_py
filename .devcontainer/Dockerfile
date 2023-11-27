@@ -10,6 +10,7 @@ WORKDIR /app
 RUN chmod -R 777 /app
 
 RUN python -m pip install --upgrade pip
-RUN pip install -r requirements.txt
+# RUN pip install -r requirements.txt
+RUN pip install -r requirements-dev.txt
 ENTRYPOINT [ "/bin/bash" ]
 

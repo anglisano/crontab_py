@@ -11,7 +11,21 @@ from crontab_py.utils.errors import (
 from uuid import uuid4
 
 class Crontab():
+    """
+    Crontab class to manage crontab jobs.
     
+    example:\n
+    from crontab_py import Crontab \n
+    ct = Crontab()\n
+    ct.add_job(
+        cmd="echo 'hello world'",
+        frequency="* * * * *",
+        path_to_log="/tmp/crontab.log",
+        id="my_job",
+        description="my job"
+    )
+
+    """    
     def __init__(self) -> None:
         self._read_crontab()
         pass
@@ -62,7 +76,16 @@ class Crontab():
         id:str=None,
         description:str=None,
         *args, **kwargs) -> None:
-        
+        """add a python job to crontab
+
+        Args:
+            path (str): path to python script
+            frequency (str): crontab frequency
+            path_to_log (str, optional): path to log file if it needed. Defaults to None.
+            path_requirements (str, optional): path to pip install - r, if exist generate a venv to execute the script. Defaults to None.
+            id (str, optional): unic identifier for the job. Defaults to None.
+            description (str, optional): description of the job. Defaults to None.
+        """        
         #if path_requirements is not None then install requirements with env_generator.sh
         if path_requirements is not None:
             subprocess.run([r.PATH_GENERATE_ENV, r.PKG_NAME ,path_requirements])
@@ -94,7 +117,16 @@ class Crontab():
         frequency:str,
         path_to_log:str=None,
         id:str=None	,
-        description:str=None) -> None:     
+        description:str=None) -> None:    
+        """ Add a job to crontab
+
+        Args:
+            cmd (str): cmd to execute
+            frequency (str): crontab frequency
+            path_to_log (str, optional): path to log file if it needed. Defaults to None.
+            id (str, optional): unic identifier for the job. Defaults to None.
+            description (str, optional): description of the job. Defaults to None.
+        """         
         if id is None:
             id = str(uuid4())
         if path_to_log is not None:
@@ -113,6 +145,9 @@ class Crontab():
         return None
     
     def remove_all(self) -> None:
+        """
+        Remove all jobs from crontab
+        """        
         subprocess.run(["crontab", "-r"])
         self._read_crontab()
     
@@ -120,7 +155,12 @@ class Crontab():
         return [line for line in self.crontab.split("\n")]
     
     def remove_job(self,id:str) -> None:
-        
+        """remove a job from crontab by id
+        not working yet
+
+        Args:
+            id (str): unic identifier for the job
+        """        
         list_crontab=self._list_crontab()
         
         for line in list_crontab:
