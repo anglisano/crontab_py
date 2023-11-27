@@ -1,7 +1,15 @@
 name: documentation
 
-on: [push, pull_request, workflow_dispatch]
- 
+# on: [push, pull_request, workflow_dispatch]
+on: 
+  workflow_dispatch:
+  # release:
+  #   types: [published]
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
 permissions:
   contents: write
 
@@ -19,7 +27,6 @@ jobs:
           sphinx-build docs/source _build
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
-        
         with:
           publish_branch: gh-pages
           github_token: ${{ secrets.GITHUB_TOKEN }}
