@@ -23,4 +23,4 @@ Explore the [complete documentation](https://anglisano.github.io/crontab_py/) fo
 ## Get Started
 For installation and additional details, refer to the [official website](https://anglisano.github.io/crontab_py/) or check out the [API Guide](https://anglisano.github.io/crontab_py/api_guide.html).
 
-Feel free to contribute, report issues, or suggest improvements by [raising an issue](https://github.com/your-repo/crontab_py/issues) 
+Feel free to contribute, report issues, or suggest improvements by [raising an issue](https://github.com/anglisano/crontab_py/issues) 
