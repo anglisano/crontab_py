@@ -21,7 +21,7 @@ current_file_path = Path(os.getcwd())
 project_root_path = current_file_path.parent.parent
 sys.path.insert(0, os.path.abspath(str(project_root_path)))
 
-package_name = "cron_py"
+package_name = "crontab_py"
 version = importlib.import_module(f"{package_name}._version")
 todays_date = date.today()
 
@@ -33,8 +33,8 @@ def setup(app):
 
 # -- Project information -----------------------------------------------------
 
-project = "cron_py"
-copyright = f"{todays_date.year} Servihabitat - Spain."
+project = "crontab_py"
+copyright = f"{todays_date.year} Marc Anglisano Roca - Spain."
 
 # The full version, including alpha/beta/rc tags
 release = version.__version__
@@ -104,7 +104,7 @@ html_show_sourcelink = False
 html_static_path = ["_static"]
 
 
-html_logo = "_static/servihabitat_logo.png"
+html_logo = "_static/minion.jpg"
 html_theme_options = {
     "display_version": True,
     "style_nav_header_background": "linear-gradient(125deg, hsl(193deg 47% 4%) 0%, hsl(193deg 33% 9%) 9%, hsl(193deg 42% 12%) 16%, hsl(192deg 49% 15%) 23%, hsl(192deg 57% 18%) 29%, hsl(191deg 65% 21%) 36%, hsl(191deg 65% 24%) 44%, hsl(191deg 64% 28%) 53%, hsl(191deg 64% 31%) 63%, hsl(190deg 64% 34%) 76%, hsl(190deg 65% 38%) 100%);",
