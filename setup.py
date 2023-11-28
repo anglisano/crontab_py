@@ -38,11 +38,12 @@ def get_package_data_files(pattern: str) -> List[str]:
 setup(
     name='crontab_py',
     version=__version__,
-    description='cron tab handler',
     author='Marc anglisano',
     author_email='marcanglisano@gmail.com',
     url='https://github.com/anglisano/crontab_py.git',
-    upload_sphinx='docs/build/html',
+    description='cron tab handler',
+    long_description=open('README.md', 'r').read(),
+    long_description_content_type='text/markdown',
     classifiers=[
         "Programming Language :: Python :: 3",
         "Operating System :: OS Independent",
@@ -58,5 +59,10 @@ setup(
         ]
     },
     python_requires='>=3.8',
+    project_urls={
+        'Documentation': 'https://anglisano.github.io/crontab_py/',
+        'Bug Reports': 'https://github.com/anglisano/crontab_py/issues',
+        'Source': 'https://github.com/anglisano/crontab_py.git',
+    },
     license='',
 )
