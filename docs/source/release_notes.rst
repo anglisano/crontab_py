@@ -9,11 +9,15 @@ Relase Notes
    * - Version
      - Authors
      - Release Notes
-   * - 0.0.2
+   * - 0.0.5
      - Marc Anglisano Roca
-     - first version funtional.
+     - setup with documentation on pypi.
    * - 0.0.3
      - Marc Anglisano Roca
      - add sphinx documentation to the project.
+   * - 0.0.2
+     - Marc Anglisano Roca
+     - first version funtional.
+
    
 

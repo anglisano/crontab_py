@@ -40,7 +40,7 @@ setup(
     version=__version__,
     author='Marc anglisano',
     author_email='marcanglisano@gmail.com',
-    url='https://github.com/anglisano/crontab_py.git',
+    # url='https://github.com/anglisano/crontab_py.git',
     description='cron tab handler',
     long_description=open('README.md', 'r').read(),
     long_description_content_type='text/markdown',
